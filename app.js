@@ -31,3 +31,11 @@ app.listen(port, () => {
 app.route("/").get((req, res) => {
   res.render('home');
 })
+
+app.route("/register")
+  .get((req, res) => {
+    res.render("register-prompt")
+  })
+
+
+
