@@ -46,14 +46,12 @@ nav {
     font-weight: 600;
     font-size: 0.8rem;
   }
+  .login:hover,
   .createAcc:hover {
     color: white;
-    background: #115272;
+    background: #57758a;
   }
-  .login:hover {
-    color: white;
-    background: #115272;
-  }
+  
   /* Buttons styling ends */
   
   /* Image after the navbar */
