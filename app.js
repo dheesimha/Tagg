@@ -44,4 +44,14 @@ app.route("/login")
   })
 
 
+app.route("/rider-login")
+  .get((req, res) => {
+    res.render("login-rider")
+  })
+
+
+app.route("/tag-login")
+  .get((req, res) => {
+    res.render("login-tag")
+  })
 
