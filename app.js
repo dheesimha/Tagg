@@ -55,3 +55,10 @@ app.route("/tag-login")
     res.render("login-tag")
   })
 
+
+app.route("/rider")
+
+  .get((req, res) => {
+    res.render("rider")
+  })
+
