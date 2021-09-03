@@ -609,14 +609,17 @@ width: 100%;
 
 
 .dataTable thead {
-  float: left;
-}
+  width: auto;
+  position: relative;
+  overflow-x: auto;
+  background:transparent;}
 
 .dataTable tbody {
   width: auto;
   position: relative;
   overflow-x: auto;
   background-color: rgba(0, 0, 0, 0.07);
+  opacity: 2;
 }
 
 .dataTable td, .dataTable th {
