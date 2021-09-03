@@ -197,6 +197,26 @@ app.route("/rider-login")
     res.render("login-rider")
   })
 
+  .post((req, res) => {
+    const user = new Rider({
+      username: req.body.username,
+      password: req.body.password,
+    })
+
+    req.login(user, (err) => {
+      if (err) {
+        console.log(err)
+      }
+
+      else {
+
+        passport.authenticate("local")(req, res, () => {
+          res.redirect("/rider")
+        })
+      }
+    })
+  })
+
 
 app.route("/tag-login")
   .get((req, res) => {
