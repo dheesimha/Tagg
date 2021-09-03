@@ -1,3 +1,4 @@
+require("dotenv").config();
 const port = 3000
 const express = require("express")
 const bodyParser = require("body-parser")
@@ -6,6 +7,7 @@ const mongoose = require("mongoose")
 const passport = require("passport")
 const session = require("express-session")
 const passportLocalMongoose = require("passport-local-mongoose")
+const _ = require("lodash");
 const LocalStrategy = require('passport-local').Strategy;
 const findOrCreate = require("mongoose-findorcreate");
 
@@ -20,6 +22,13 @@ app.use(bodyParser.json());
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.use(session({
+  secret: process.env.secret,
+  resave: false,
+  saveUninitialized: false,
+}))
+
+app.use(passport.initialize())
 
 app.use(passport.session())
 
@@ -118,16 +127,11 @@ passport.use(new LocalStrategy(
   }
 ));
 
+app.route("/")
+  .get((req, res) => {
+    res.render('home');
+  })
 
-
-
-
-
-// Set up home route
-
-app.route("/").get((req, res) => {
-  res.render('home');
-})
 
 
 app.route("/register")
@@ -180,7 +184,21 @@ app.route("/register-rider")
       else {
         passport.authenticate("local")(req, res, () => {
 
+          let rider = new Rider({
+            phoneNo: req.body.phoneNo,
+            aadharNo: req.body.aadharNo,
+            dlNo: req.body.dlNo,
+            usn: req.body.usn
+
+          })
+
+          rider.save((err, results) => {
+            console.log("Record added")
+
+          })
+
           res.redirect("/rider-login")
+
 
         })
       }
@@ -193,18 +211,11 @@ app.route("/register-tag")
   })
 
 
-app.route("/status")
-  .get((req, res) => {
-    res.render("status")
-  })
-
-
-
-
 app.route("/tag")
   .get((req, res) => {
     res.render("tag")
   })
+
 
 app.listen(port, () => {
   console.log(`Application running on port ${port}.`);
