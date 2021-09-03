@@ -62,12 +62,17 @@ app.route("/rider")
   })
 
 app.route("/register-rider")
-.get((req,res)=>{
-  res.render("register-rider")
-})
+  .get((req, res) => {
+    res.render("register-rider")
+  })
 
 app.route("/register-tag")
-.get((req,res)=>{
-  res.render("register-tag")
-})
+  .get((req, res) => {
+    res.render("register-tag")
+  })
 
+
+app.route("/tag")
+  .get((req, res) => {
+    res.render("tag")
+  })
