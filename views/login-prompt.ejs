@@ -28,15 +28,15 @@ h1.login-logo {
   width: 40%;
   text-align: center;
   display: block;
-  background-color: #7a54a0;
-  color: white;
+  background-color: #ffffff;
+  color: rgb(255, 14, 14);
   border-radius: 14px;
   transition: all 0.5s ease;
   cursor: pointer;
 }
 
 #login-button1:hover {
-  background-color: rgb(154, 120, 199) !important;
+  background-color: rgb(241, 38, 38) !important;
   color: white;
   cursor: pointer;
 }
@@ -57,8 +57,8 @@ h1.login-logo {
 }
 
 #login-button2:hover {
-  background-color: rgb(218, 125, 125) !important;
-  color: white;
+  background-color: rgb(255, 255, 255) !important;
+  color: rgb(236, 35, 35);
   cursor: pointer;
 }
 /* login-prompt-page ends here  */
@@ -68,8 +68,8 @@ h1.login-logo {
 
 
     <div class="login-prompt">
-        <button id="login-button1">Login as a rider</button>
-        <button id="login-button2">Login as a tag</button>
+      <a href="/rider-login"><button id="login-button1">Login as a rider</button></a>
+      <a href="/tag-login"><button id="login-button2">Login as a tag</button></a>
     </div>
 </div>
     <%- include('partials/footer') %>
