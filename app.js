@@ -151,10 +151,7 @@ app.route("/rider-login")
     res.render("login-rider")
   })
 
-  app.route("/status")
-  .get((req, res) => {
-    res.render("status")
-  })
+  
 app.route("/tag-login")
   .get((req, res) => {
     res.render("login-tag")
