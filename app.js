@@ -50,17 +50,26 @@ mongoose.connect(uri, {
   })
 
 
-// mongoose.set("useCreateIndex", true); 
+// mongoose.set("useCreateIndex", true);
 
-const userSchema = new mongoose.Schema({
-  username: {
+const riderSchema = new mongoose.Schema({
+  name: {
     type: String,
-    required: true,
+
   },
 
-  email: {
+  usn: {
     type: String,
+  },
 
+  aadharNo:
+  {
+    type: String,
+  },
+
+  dlNo:
+  {
+    type: String,
   },
 
   password: {
@@ -68,21 +77,26 @@ const userSchema = new mongoose.Schema({
 
   },
 
+  phoneNo:
+  {
+    type: String,
+  },
+
 
 
 });
 
 
-userSchema.plugin(passportLocalMongoose, {
+riderSchema.plugin(passportLocalMongoose, {
   usernameField: "username"
 });
 
-userSchema.plugin(findOrCreate);
+riderSchema.plugin(findOrCreate);
 
-const User = new mongoose.model("User", userSchema);
+const Rider = new mongoose.model("Rider", riderSchema);
 
 
-passport.use(User.createStrategy())
+passport.use(Rider.createStrategy())
 
 
 passport.serializeUser(function (user, done) {
@@ -92,7 +106,7 @@ passport.serializeUser(function (user, done) {
 
 
 passport.deserializeUser(function (id, done) {
-  User.findById(id, function (err, user) {
+  Rider.findById(id, function (err, user) {
     done(err, user);
   });
 });
@@ -100,7 +114,7 @@ passport.deserializeUser(function (id, done) {
 
 passport.use(new LocalStrategy(
   function (username, password, done) {
-    User.findOne({ username: username }, function (err, user) {
+    Rider.findOne({ username: username }, function (err, user) {
       if (err) { return done(err); }
       if (!user) {
         return done(null, false, { message: 'Incorrect username.' });
@@ -113,14 +127,12 @@ passport.use(new LocalStrategy(
   }
 ));
 
+app.route("/")
+  .get((req, res) => {
+    res.render('home');
+  })
 
 
-
-// Set up home route
-
-app.route("/").get((req, res) => {
-  res.render('home');
-})
 
 app.route("/register")
   .get((req, res) => {
@@ -152,8 +164,31 @@ app.route("/rider")
   })
 
 app.route("/register-rider")
+
   .get((req, res) => {
     res.render("register-rider")
+
+  })
+
+  .post((req, res) => {
+
+    const username = req.body.name
+    const password = req.body.password
+
+    Rider.register({ username: username, provider: "local" }, password, (err, user) => {
+      if (err) {
+        console.log(err)
+        res.redirect("/register")
+      }
+
+      else {
+        passport.authenticate("local")(req, res, () => {
+
+          res.redirect("/rider-login")
+
+        })
+      }
+    })
   })
 
 app.route("/register-tag")
