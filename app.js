@@ -83,7 +83,6 @@ const riderSchema = new mongoose.Schema({
   },
 
 
-
 });
 
 
@@ -99,6 +98,53 @@ const Rider = new mongoose.model("Rider", riderSchema);
 passport.use(Rider.createStrategy())
 
 
+const tagSchema = new mongoose.Schema({
+  name: {
+    type: String,
+
+  },
+
+  usn: {
+    type: String,
+  },
+
+  aadharNo:
+  {
+    type: String,
+  },
+
+  dlNo:
+  {
+    type: String,
+  },
+
+  password: {
+    type: String,
+
+  },
+
+  phoneNo:
+  {
+    type: String,
+  },
+
+
+});
+
+
+tagSchema.plugin(passportLocalMongoose, {
+  usernameField: "username"
+});
+
+tagSchema.plugin(findOrCreate);
+
+const Tag = new mongoose.model("Tag", riderSchema);
+
+
+passport.use(Tag.createStrategy())
+
+
+
 passport.serializeUser(function (user, done) {
   done(null, user);
 });
@@ -106,7 +152,7 @@ passport.serializeUser(function (user, done) {
 
 
 passport.deserializeUser(function (id, done) {
-  Rider.findById(id, function (err, user) {
+  Tag.findById(id, function (err, user) {
     done(err, user);
   });
 });
@@ -114,7 +160,7 @@ passport.deserializeUser(function (id, done) {
 
 passport.use(new LocalStrategy(
   function (username, password, done) {
-    Rider.findOne({ username: username }, function (err, user) {
+    Tag.findOne({ username: username }, function (err, user) {
       if (err) { return done(err); }
       if (!user) {
         return done(null, false, { message: 'Incorrect username.' });
@@ -208,6 +254,41 @@ app.route("/register-rider")
 app.route("/register-tag")
   .get((req, res) => {
     res.render("register-tag")
+  })
+
+  .post((req, res) => {
+
+    const username = req.body.name
+    const password = req.body.password
+
+    Tag.register({ username: username, provider: "local" }, password, (err, user) => {
+      if (err) {
+        console.log(err)
+        res.redirect("/register")
+      }
+
+      else {
+        passport.authenticate("local")(req, res, () => {
+
+          let tag = new Tag({
+            phoneNo: req.body.phoneNo,
+            aadharNo: req.body.aadharNo,
+            dlNo: req.body.dlNo,
+            usn: req.body.usn
+
+          })
+
+          tag.save((err, results) => {
+            console.log("Record added")
+
+          })
+
+          res.redirect("/tag-login")
+
+
+        })
+      }
+    })
   })
 
 
