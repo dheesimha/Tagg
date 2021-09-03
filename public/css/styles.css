@@ -184,6 +184,9 @@ section .title::after {
 .about .about-content .right .text span {
   color: crimson;
 }
+span {
+  color: crimson;
+}
 .about .about-content .right p {
   text-align: justify;
 }
@@ -317,121 +320,9 @@ footer span a:hover {
 
 /* home page ends here */
 
-/*Register prompt page starts here*/
 
-h1.register-logo {
-  text-align: center;
-  margin: auto;
-  margin-top: 50px;
-}
 
-.register-prompt {
-  /* background-color: #3b185f; */
-  /* border: 2px solid black;  */
-  margin: 190px;
-}
 
-#register-button1 {
-  margin: auto;
-  margin-top: 12px;
-  margin-bottom: 12px;
-  padding: 8px;
-  width: 70%;
-  text-align: center;
-  display: block;
-  background-color: #7a54a0;
-  color: white;
-  border-radius: 14px;
-  transition: all 0.5s ease;
-  cursor: pointer;
-}
-
-#register-button1:hover {
-  background-color: rgb(154, 120, 199) !important;
-  color: white;
-  cursor: pointer;
-}
-
-#register-button2 {
-  margin: auto;
-  margin-top: 12px;
-  margin-bottom: 12px;
-  padding: 8px;
-  width: 70%;
-  text-align: center;
-  display: block;
-  background-color: #c94242;
-  color: white;
-  border-radius: 14px;
-  transition: all 0.5s ease;
-  cursor: pointer;
-}
-
-#register-button2:hover {
-  background-color: rgb(218, 125, 125) !important;
-  color: white;
-  cursor: pointer;
-}
-
-/* Register prompt page ends here  */
-
-/* login-prompt-page starts here  */
-
-h1.login-logo {
-  text-align: center;
-  margin: auto;
-  margin-top: 50px;
-}
-
-.login-prompt {
-  /* background-color: #3b185f; */
-  /* border: 2px solid black;  */
-  margin: 190px;
-}
-
-#login-button1 {
-  margin: auto;
-  margin-top: 12px;
-  margin-bottom: 12px;
-  padding: 8px;
-  width: 70%;
-  text-align: center;
-  display: block;
-  background-color: #7a54a0;
-  color: white;
-  border-radius: 14px;
-  transition: all 0.5s ease;
-  cursor: pointer;
-}
-
-#login-button1:hover {
-  background-color: rgb(154, 120, 199) !important;
-  color: white;
-  cursor: pointer;
-}
-
-#login-button2 {
-  margin: auto;
-  margin-top: 12px;
-  margin-bottom: 12px;
-  padding: 8px;
-  width: 70%;
-  text-align: center;
-  display: block;
-  background-color: #c94242;
-  color: white;
-  border-radius: 14px;
-  transition: all 0.5s ease;
-  cursor: pointer;
-}
-
-#login-button2:hover {
-  background-color: rgb(218, 125, 125) !important;
-  color: white;
-  cursor: pointer;
-}
-
-/* login-prompt-page ends here  */
 
 /* login page rider starts here  */
 

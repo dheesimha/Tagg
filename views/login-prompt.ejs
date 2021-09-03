@@ -1,17 +1,75 @@
 <%- include('partials/header') %>
+<style>
+    /* login-prompt-page starts here  */
+body {
+  background:linear-gradient(135deg,#171010,#2B2B2B);
+  margin: 0;
+}
 
-<nav class="navbar">
-    <div class="max-width">
-        <div class="logo"><a href="#">Ta<span>gg.</span></a></div>
-    </div>
-</nav>
-    <h1>This page is login page</h1>
-    <h1 class="login-logo">Logo goes here</h1>
+h1.login-logo {
+  text-align: center;
+  margin: auto;
+  margin-top: 200px;
+  color: white;
+  font-size: 70px;
+}
+
+.login-prompt {
+  /* background-color: #3b185f; */
+  /* border: 2px solid black;  */
+  margin: 100px;
+}
+
+#login-button1 {
+  margin: auto;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  padding: 15px;
+  width: 40%;
+  text-align: center;
+  display: block;
+  background-color: #7a54a0;
+  color: white;
+  border-radius: 14px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+#login-button1:hover {
+  background-color: rgb(154, 120, 199) !important;
+  color: white;
+  cursor: pointer;
+}
+
+#login-button2 {
+  margin: auto;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  padding: 15px;
+  width: 40%;
+  text-align: center;
+  display: block;
+  background-color: #c94242;
+  color: white;
+  border-radius: 14px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+#login-button2:hover {
+  background-color: rgb(218, 125, 125) !important;
+  color: white;
+  cursor: pointer;
+}
+/* login-prompt-page ends here  */
+</style>
+<div class="login-prompt-body">
+    <h1 class="login-logo">Ta<span>gg.</span></h1>
 
 
     <div class="login-prompt">
-        <button id="login-button1">Register as a rider</button>
-        <button id="login-button2">Register as a tag</button>
+        <button id="login-button1">Login as a rider</button>
+        <button id="login-button2">Login as a tag</button>
     </div>
-
+</div>
     <%- include('partials/footer') %>
