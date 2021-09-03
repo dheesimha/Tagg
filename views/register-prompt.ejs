@@ -28,16 +28,16 @@ h1.register-logo {
   width: 40%;
   text-align: center;
   display: block;
-  background-color: #7a54a0;
-  color: white;
+  background-color: #ffffff;
+  color: rgb(255, 10, 10);
   border-radius: 14px;
   transition: all 0.5s ease;
   cursor: pointer;
 }
 
 #register-button1:hover {
-  background-color: rgb(154, 120, 199) !important;
-  color: white;
+  background-color: rgb(255, 20, 20) !important;
+  color: rgb(255, 255, 255);
   cursor: pointer;
 }
 
@@ -57,8 +57,8 @@ h1.register-logo {
 }
 
 #register-button2:hover {
-  background-color: rgb(218, 125, 125) !important;
-  color: white;
+  background-color: rgb(255, 255, 255) !important;
+  color: rgb(180, 25, 25);
   cursor: pointer;
 }
 /* register-prompt-page ends here  */
@@ -68,8 +68,8 @@ h1.register-logo {
 
 
     <div class="register-prompt">
-        <button id="register-button1">Register as a rider</button>
-        <button id="register-button2">Register as a tag</button>
+      <a href="/register-rider"><button id="register-button1">Login as a rider</button></a>
+      <a href="/register-tag"><button id="register-button2">Login as a tag</button></a>
     </div>
 </div>
     <%- include('partials/footer') %>
