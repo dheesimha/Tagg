@@ -1,75 +1,76 @@
 <%- include('partials/header') %>
-<style>
+  <style>
     /* register-prompt-page starts here  */
-body {
-  background:linear-gradient(135deg,#171010,#2B2B2B);
-  margin: 0;
-}
+    body {
+      background: linear-gradient(135deg, #171010, #2B2B2B);
+      margin: 0;
+    }
 
-h1.register-logo {
-  text-align: center;
-  margin: auto;
-  margin-top: 200px;
-  color: white;
-  font-size: 70px;
-}
+    h1.register-logo {
+      text-align: center;
+      margin: auto;
+      margin-top: 200px;
+      color: white;
+      font-size: 70px;
+    }
 
-.register-prompt {
-  /* background-color: #3b185f; */
-  /* border: 2px solid black;  */
-  margin: 100px;
-}
+    .register-prompt {
+      /* background-color: #3b185f; */
+      /* border: 2px solid black;  */
+      margin: 100px;
+    }
 
-#register-button1 {
-  margin: auto;
-  margin-top: 12px;
-  margin-bottom: 12px;
-  padding: 15px;
-  width: 40%;
-  text-align: center;
-  display: block;
-  background-color: #ffffff;
-  color: rgb(255, 10, 10);
-  border-radius: 14px;
-  transition: all 0.5s ease;
-  cursor: pointer;
-}
+    #register-button1 {
+      margin: auto;
+      margin-top: 12px;
+      margin-bottom: 12px;
+      padding: 15px;
+      width: 40%;
+      text-align: center;
+      display: block;
+      background-color: #ffffff;
+      color: rgb(255, 10, 10);
+      border-radius: 14px;
+      transition: all 0.5s ease;
+      cursor: pointer;
+    }
 
-#register-button1:hover {
-  background-color: rgb(255, 20, 20) !important;
-  color: rgb(255, 255, 255);
-  cursor: pointer;
-}
+    #register-button1:hover {
+      background-color: rgb(255, 20, 20) !important;
+      color: rgb(255, 255, 255);
+      cursor: pointer;
+    }
 
-#register-button2 {
-  margin: auto;
-  margin-top: 12px;
-  margin-bottom: 12px;
-  padding: 15px;
-  width: 40%;
-  text-align: center;
-  display: block;
-  background-color: #c94242;
-  color: white;
-  border-radius: 14px;
-  transition: all 0.5s ease;
-  cursor: pointer;
-}
+    #register-button2 {
+      margin: auto;
+      margin-top: 12px;
+      margin-bottom: 12px;
+      padding: 15px;
+      width: 40%;
+      text-align: center;
+      display: block;
+      background-color: #c94242;
+      color: white;
+      border-radius: 14px;
+      transition: all 0.5s ease;
+      cursor: pointer;
+    }
 
-#register-button2:hover {
-  background-color: rgb(255, 255, 255) !important;
-  color: rgb(180, 25, 25);
-  cursor: pointer;
-}
-/* register-prompt-page ends here  */
-</style>
-<div class="register-prompt-body">
+    #register-button2:hover {
+      background-color: rgb(255, 255, 255) !important;
+      color: rgb(180, 25, 25);
+      cursor: pointer;
+    }
+
+    /* register-prompt-page ends here  */
+  </style>
+  <div class="register-prompt-body">
     <h1 class="register-logo">Ta<span>gg.</span></h1>
 
 
     <div class="register-prompt">
-      <a href="/register-rider"><button id="register-button1">Login as a rider</button></a>
-      <a href="/register-tag"><button id="register-button2">Login as a tag</button></a>
+      <a href="/rider-login"><button id="register-button1">Login as a rider</button></a>
+      <a href="/tag-login"><button id="register-button2">Login as a tag</button></a>
     </div>
-</div>
-    <%- include('partials/footer') %>
+  </div>
+  <%- include('partials/footer') %>
