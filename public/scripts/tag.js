@@ -55,6 +55,7 @@ var x = document.getElementById("demo");
 function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
+        
     } else {
         x.innerHTML = "Geolocation is not supported by this browser.";
     }
@@ -63,4 +64,18 @@ function getLocation() {
 function showPosition(position) {
     x.innerHTML = "Longitude: " + position.coords.longitude +
         "<br>Latitude: " + position.coords.latitude;
+}
+
+
+function coOrdinates() {
+    // document.getElementById("coordinates").innerHTML = "1"+position.coords.longitude;
+  /* Get the text field */
+  var copyText = document.getElementById("coordinates");
+
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+  /* Copy the text inside the text field */
+  navigator.clipboard.writeText(copyText.value);
 }
