@@ -216,6 +216,10 @@ app.route("/tag")
     res.render("tag")
   })
 
+  app.route("/status")
+  .get((req, res) => {
+    res.render("status")
+  })
 
 app.listen(port, () => {
   console.log(`Application running on port ${port}.`);
