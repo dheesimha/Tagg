@@ -19,25 +19,64 @@
 
     <style>
         body {
-            margin: 5px;
-            padding: 5px;
-
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(rgb(49, 45, 45),rgb(41, 39, 39));
+            text-align: center;
         }
 
         #map {
-            height: 90vh;
-            width: 90vw;
+            height: 80vh;
+            width: 99vw;
         }
-
+        h1,p,label{
+            color: white;
+            padding: 20px;
+        }
+        #demo{
+            color: white;
+            padding: 20px;
+        }
         #submit-btn-rider {
             background-color: red;
             color: white;
+            width: 200px;
+            height: 50px;
             margin: 40px 500px;
             border-radius: 50px;
-            padding: 20px;
-            font-size: medium;
+            padding: 10px;
+            font-size: small;
             cursor: pointer;
-            border: 2px solid whitesmoke;
+            border: none;
+        }
+        #submit-btn-rider:hover {
+            background-color: rgb(255, 111, 111);
+            color: white;
+        }
+        #coord-btn{
+            background-color: red;
+            color: white;
+            width: 150px;
+            height: 40px;
+            border-radius: 50px;
+            padding: 10px;
+            border: none;
+            font-size: xx-small;
+            cursor: pointer;
+            margin-top: 0;
+        }
+        #coord-btn:hover {
+            background-color: rgb(255, 111, 111);
+            color: white;
+        }
+
+        input{
+            border-radius: 5px;
+	border: 1px solid #848484;
+	outline:0;
+	height:25px;
+	width: 175px;
+    margin-top: 20px;
         }
     </style>
 
@@ -50,9 +89,9 @@
 <body>
     <div id='map'></div>
 
-    <p>Click the button to get your coordinates.</p>
+    <h1>Click to see your location</h1>
 
-    <button onclick="getLocation()">View coordinates</button>
+    <button onclick="getLocation()" id="coord-btn">View coordinates</button>
 
     <p id="demo"></p>
 
@@ -60,9 +99,9 @@
 
     <form action="">
         <label for="">Enter tag's longitude</label>
-        <input type="text" name="" id="">
+        <input type="text" name="" id=""><br>
         <label for="">Enter tag's latitude</label>
-        <input type="text" name="" id="">
+        <input type="text" name="" id=""><br>
         <label for="">Enter tag's USN</label>
         <input type="text" name="" id="">
 
