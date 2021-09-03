@@ -580,3 +580,108 @@ form .button input:hover {
 } */
 
 /* register rider page ends here */
+/* status page  here */
+.status-body{
+    height: 1000px;
+width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+  background-image: url("/images/map4.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; 
+  background-size: 100%;
+}
+.dataTable {
+  display: inline-block;
+  width: 75%;
+  background-color:white;
+  margin-left: auto;
+  margin-right: auto;
+}
+  
+
+
+.dataTable thead, .dataTable tbody, .dataTable thead tr, .dataTable th {
+  display: block;
+  }
+
+
+.dataTable thead {
+  float: left;
+}
+
+.dataTable tbody {
+  width: auto;
+  position: relative;
+  overflow-x: auto;
+  background-color: rgba(0, 0, 0, 0.07);
+}
+
+.dataTable td, .dataTable th {
+  padding: .625em;
+  line-height: 0.5em;
+  border-bottom: 3px solid rgb(0, 0, 0);
+  box-sizing: content-box;  
+  width: 1px;
+  height: 1.5px;
+  padding: 10px;  
+  border: 2px solid rgb(0, 0, 0);
+  overflow-x: hidden;
+  overflow-y: auto;
+ 
+}
+
+.dataTable th {
+  text-align: left;
+  
+  border-bottom: 3px solid rgb(15, 15, 15);
+ 
+}
+
+.dataTable tbody tr {
+  display: table-cell;
+ 
+}
+
+.dataTable tbody td {
+  display: block;
+  
+}
+
+.dataTable tr:nth-child(odd) {
+	background: rgba(2, 2, 2, 0.07);
+  
+}
+
+@media screen and (min-width: 100em) {
+
+  .dataTable {
+    display: table;
+
+  }
+  
+  .dataTable thead {
+    display: table-header-group;
+    float: none;
+  }
+  
+  .dataTable tbody {
+    display: table-row-group;
+  }
+  
+  .dataTable thead tr, .dataTable tbody tr {
+    display: table-row;
+  }
+  
+  .dataTable th, .dataTable tbody td {
+    display: table-cell;
+  }
+  
+  .dataTable td, .dataTable th {
+    width: auto;
+  }
+  
+}
+/*status page ends here */
