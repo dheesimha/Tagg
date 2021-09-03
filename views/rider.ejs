@@ -19,14 +19,21 @@
 
     <style>
         body {
-            margin: 0;
+            margin: 5px;
+            padding: 5px;
+
         }
 
+
+
+
         #map {
-            height: 70vh;
-            width: 70vw;
+            height: 90vh;
+            width: 90vw;
         }
     </style>
+
+    <link rel="stylesheet" href="./style.css">
 
     <script src="../scripts/rider.js" defer></script>
 
@@ -34,6 +41,20 @@
 
 <body>
     <div id='map'></div>
+
+    <p>Click the button to get your coordinates.</p>
+
+    <button onclick="getLocation()">View coordinates</button>
+
+    <p id="demo"></p>
+
+    <button
+        style="background-color: red;color: white; margin:40px 500px;border-radius: 50px;padding:30px;font-size: medium;cursor: pointer;border: 2px solid whitesmoke;">Search
+        your
+        tag
+        buddy</button>
+
+
 
 </body>
 
