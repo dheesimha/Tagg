@@ -115,7 +115,7 @@ section .title::after {
 /* home section styling */
 .home {
   display: flex;
-  background: url("/images/banner.jpg") no-repeat center;
+  background: url("/images/home-banner.jpg") no-repeat center;
   height: 100vh;
   color: #fff;
   min-height: 500px;
@@ -320,10 +320,6 @@ footer span a:hover {
 
 /* home page ends here */
 
-
-
-
-
 /* login page rider starts here  */
 
 .login-body-rider {
@@ -453,7 +449,7 @@ input[type="submit"]:hover {
 
 /* register rider page starts here  */
 
-.register-body{
+.register-body {
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -461,7 +457,7 @@ input[type="submit"]:hover {
   background: linear-gradient(135deg, #020202, #383737);
 }
 
-.container{
+.container {
   max-width: 800px;
   background-color: whitesmoke;
   max-height: 800px;
@@ -581,7 +577,7 @@ form .button input:hover {
 
 /* register rider page ends here */
 /* status page  here */
-.status-body{
+.status-body {
   height: 1000px;
   width: 100%;
   justify-content: center;
@@ -590,7 +586,7 @@ form .button input:hover {
   background-color: black;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: center; 
+  background-position: center;
   background-size: 200%;
   font-weight: bold;
   font-size: larger;
@@ -599,17 +595,16 @@ form .button input:hover {
   /* display: inline-block; */
   width: 100%;
   height: 100%;
-  background-color:rgb(219, 219, 219);
+  background-color: rgb(219, 219, 219);
   margin-left: auto;
   margin-right: auto;
 }
-  
-
 
 /* .dataTable thead, .dataTable tbody, .dataTable thead tr, .dataTable th {
   /* display: block; 
   } */
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 .dataTable thead {
@@ -620,6 +615,8 @@ form .button input:hover {
 
 =======
 >>>>>>> c6c952d5e1757d9aad8682f31ee9ecd0e0d287c4
+=======
+>>>>>>> 60b91af25fd93396303dbb2db51aa95a9dff25b0
 .dataTable tbody {
   position: relative;
   overflow-x: auto;
@@ -627,25 +624,24 @@ form .button input:hover {
   opacity: 2;
 }
 
-.dataTable td, .dataTable th {
-  padding: .625em;
+.dataTable td,
+.dataTable th {
+  padding: 0.625em;
   line-height: 0.5em;
   /* border-bottom: 3px solid rgb(0, 0, 0); */
-  box-sizing: content-box;  
+  box-sizing: content-box;
   width: 1px;
   height: 1.5px;
-  padding: 10px;  
+  padding: 10px;
   border: 2px solid rgb(0, 0, 0);
   overflow-x: hidden;
   overflow-y: auto;
- 
 }
 
 .dataTable th {
   text-align: left;
-  
+
   /* border-bottom: 3px solid rgb(15, 15, 15); */
- 
 }
 
 /* .dataTable tbody tr {
@@ -659,37 +655,36 @@ form .button input:hover {
 } */
 
 .dataTable tr:nth-child(odd) {
-	background: rgba(2, 2, 2, 0.07);
-  
+  background: rgba(2, 2, 2, 0.07);
 }
 
 @media screen and (min-width: 100em) {
-
   .dataTable {
     display: table;
-
   }
-  
+
   .dataTable thead {
     display: table-header-group;
     float: none;
   }
-  
+
   .dataTable tbody {
     display: table-row-group;
   }
-  
-  .dataTable thead tr, .dataTable tbody tr {
+
+  .dataTable thead tr,
+  .dataTable tbody tr {
     display: table-row;
   }
-  
-  .dataTable th, .dataTable tbody td {
+
+  .dataTable th,
+  .dataTable tbody td {
     display: table-cell;
   }
-  
-  .dataTable td, .dataTable th {
+
+  .dataTable td,
+  .dataTable th {
     width: auto;
   }
-  
 }
 /*status page ends here */
